@@ -59,7 +59,7 @@ jobs:
         SONAR_TOKEN: ${{ secrets.SONARQUBE_TOKEN }}
       run: |
         mvn sonar:sonar \
-        -Dsonar.projectKey=<your_project_key> \
+        -Dsonar.projectKey=JavaWebApp-Project \
         -Dsonar.host.url=http://172.31.90.165:9000 \
         -Dsonar.login=$SONAR_TOKEN
 

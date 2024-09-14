@@ -1,4 +1,4 @@
-name: MY CI/CD Pipeline
+name: My CI/CD Pipeline
 
 on:
   push:
@@ -59,7 +59,7 @@ jobs:
         SONAR_TOKEN: ${{ secrets.SONARQUBE_TOKEN }}
       run: |
         mvn sonar:sonar \
-        -Dsonar.project[REDACTED:Generic API Key]\
+        -Dsonar.projectKey=<your_project_key> \
         -Dsonar.host.url=http://172.31.90.165:9000 \
         -Dsonar.login=$SONAR_TOKEN
 
